@@ -1,0 +1,95 @@
+/* General styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+input,
+button {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Please Wait Styling */
+.loading {
+    font-size: 20px;
+    display: inline-block;
+    font-weight: bold;
+    color: #000;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+/* Animations for the text */
+@keyframes yellow {
+    0% {
+        color: transparent;
+    }
+    100% {
+        color: yellow;
+    }
+}
+
+@keyframes green {
+    0% {
+        color: transparent;
+    }
+    100% {
+        color: green;
+    }
+}
+/* General Letter Styles */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    font-weight: bold;
+    transition: opacity 0.3s ease, color 0.3s ease-in-out;
+}
+
+.letter-yellow {
+    opacity: 1;
+    color: yellow;
+}
+
+.letter-green {
+    opacity: 1;
+    color: green;
+}
+
+.loading {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+    white-space: pre-wrap; /* Preserve spaces and line breaks */
+}

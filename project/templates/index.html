@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counting Speed Comparison</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Counting Speed Comparison</h1>
+            <p>Test how fast different programming languages can count!</p>
+        </header>
+        <main>
+            <div id="language-buttons">
+                {% for language in languages %}
+                    <button class="language-btn" onclick="selectLanguage('{{ language }}')">{{ language }}</button>
+                {% endfor %}
+            </div>
+            <div id="input-container" style="display: none;">
+                <p id="selected-language"></p>
+                <input type="number" id="number-input" placeholder="Enter a number" min="1" max="1000000000">
+                <button onclick="count()">Count</button>
+            </div>
+            <p id="loading" style="display: none;">Counting in progress...</p>
+            <p id="result"></p>
+        </main>
+        <footer>
+            <p>Created with ❤ by <a href="https://github.com/theneofan">theneofan</a></p>
+        </footer>
+    </div>
+</body>
+</html>
